@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Medi-Sync: The Family Care Coordination Dashboard
 
-## Getting Started
+**Live Application:** [https://medisync-app.vercel.app/](https://medisync-app.vercel.app/)
 
-First, run the development server:
+## 1. Project Overview and Origin Story
+
+The **Medi-Sync Family Dashboard** is a custom web application designed to manage the immense cognitive and emotional load associated with complex, multi-person care coordination. This project was born out of necessity—to create a single **Source of Truth** for medical events, routines, and domestic task delegation within a high-pressure family environment.
+
+The core purpose is to eliminate the **"Recall Audit"** (the mental strain of remembering every detail) and remove emotional friction by allowing family members and carers to share information via data, not stressful dialogue.
+
+It functions as a **trauma-informed tool**, designed with a **"Calm Technology"** UI to reduce user cortisol levels when logging critical information.
+
+## 2. Key Features
+
+The application provides a comprehensive, centralised platform for care management:
+
+### 2.1. Critical Event Logging (Medical Focus)
+
+- **Seizure/Episode Tracker:** Fast, simple logging of event duration, severity, and post-event actions.
+- **Medication Administration Log:** Time-stamped records of administered medications (e.g., dosage, time, carer who administered it).
+- **Routine Management:** Tracking of complex daily and weekly schedules (physio, appointments, school runs).
+
+### 2.2. Domestic & Emotional Bridge
+
+- **Task Delegation:** Functionality to delegate non-medical tasks (e.g., shopping, laundry) to other carers, clearly assigning ownership.
+- **Source of Truth:** A central timeline and record for historical data, essential for future-proofing care plans and communicating with external healthcare providers.
+
+## 3. Technology Stack
+
+| Component | Technology | Rationale |
+|-----------|-----------|-----------|
+| **Framework** | Next.js / React | Provides the structure for a scalable, secure, and component-based user interface. |
+| **Styling** | Tailwind CSS + Glassmorphism | Custom CSS built on Tailwind, utilizing a low-contrast, glassy aesthetic ("Sage & Slate") to promote calmness and focus. |
+| **State Management** | React Hooks (useState, Context API) | Manages complex, real-time data efficiently. |
+| **Database** | Firebase (Firestore) | Real-time synchronization of medical logs and domestic tasks across all family devices (ensuring immediate data consistency). |
+| **Authentication** | Firebase Authentication | Secure, controlled access for all authorized carers and family members. |
+| **Data Integrity** | Custom Logic | Ensuring data logged is immutable and traceable to the user who entered it. |
+
+## 4. Setup and Development
+
+Follow these steps to set up and run the Medi-Sync project locally.
+
+### 4.1. Prerequisites
+
+- Node.js (v18+)
+- npm or yarn
+- A Firebase project configured for Firestore and Authentication
+
+### 4.2. Installation
+
+1. **Clone the repository:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [your-repo-link]
+cd medisync-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+# or
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Configure Environment Variables:**
 
-## Learn More
+Create a `.env.local` file in the root directory and add your Firebase configuration:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+# ... include other required Firebase settings
+4.3. Running the ApplicationStart the Next.js development server:npm run dev
+# or
+yarn dev
+The application will be accessible at http://localhost:3000.5. Deployment and Future ScopeThe application is built for deployment on platforms like Vercel or Netlify.Future Scope: Integrate external APIs for calendar synchronization (i.e., Google Calendar) and notification services (Twilio) for proactive alerts on missed medications or upcoming appointments.
