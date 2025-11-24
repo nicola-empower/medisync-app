@@ -10,7 +10,7 @@ export default function Header() {
                 <span><strong>Primary Carer</strong> (You)</span>
             </div>
             <div className="text-sm text-[var(--color-brand)]">
-                <i className="fa-solid fa-user-clock mr-1"></i> Next Shift: <strong>Sarah (Sat 8am)</strong>
+                <i className="fa-solid fa-user-clock mr-1"></i> Next Shift: <strong>Friend (Sat 8am)</strong>
             </div>
         </header>
     );
