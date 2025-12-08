@@ -1,6 +1,8 @@
 # Medi-Sync: The Family Care Coordination Dashboard
 
 **Live Application:** [https://medisync-app.vercel.app/](https://medisync-app.vercel.app/)
+<img width="2846" height="1517" alt="image" src="https://github.com/user-attachments/assets/9b98b18d-7e31-446f-bf3a-43886dbf1338" />
+
 
 ## 1. Project Overview and Origin Story
 
